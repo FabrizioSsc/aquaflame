@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Duhai';
+  src: url('Duhai.ttf') format('truetype'); /* Atualize o caminho conforme a localização do arquivo */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Duhai', Arial, sans-serif; /* Aplica Duhai como fonte principal */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #00ff9d, #7cccfa, #f5f546); /* Degradê: Verde, Pink, Amarelo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: 400% 400%; /* Para criar uma transição fluida */
+  animation: gradientAnimation 10s ease infinite; /* Animação do degradê */
+  box-sizing: border-box;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Máximo espaço em telas maiores */
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Limita a largura */
+  box-sizing: border-box;
+  
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%; /* Mantém responsivo em telas menores */
+  box-sizing: border-box;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: 'Duhai', Arial, sans-serif; /* Aplica a fonte ao título */
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #555;
+}
+
+input {
+  width: 90%; /* Ajusta para usar o espaço disponível */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 97%; /* Ajusta para preencher o contêiner */
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #04b16f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c1d1c;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons .icon {
+  font-size: 24px;
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  color: #3794f8; /* Cor ao passar o mouse */
+}
+
+.icon.facebook:hover {
+  color: #3b5998; /* Azul do Facebook */
+}
+
+.icon.whatsapp:hover {
+  color: #25D366; /* Verde do WhatsApp */
+}
+
+.icon.twitter:hover {
+  color: #1DA1F2; /* Azul do Twitter */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+
+  }
+  .main-container {
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+
+  }
+
+  .logo-image {
+    width: 100%;
+    
+  }
+
+  
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .social-icons .icon {
+    font-size: 20px;
+  }
+}

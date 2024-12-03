@@ -1,0 +1,362 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MyFonte';  /* Nome que você escolheu */
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Barra de navegação superior */
+.appbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3fe0e6;
+    padding: 2rem 4rem;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+}
+
+.appbar h1 {
+    font-size: 1.5rem;
+}
+
+/* Mantém o estilo para a lista de navegação */
+.appbar-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.appbar-right li {
+    display: inline;
+}
+
+.appbar-right a {
+    color: #ffffff; /* BRANCO */
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 0 #000000,
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                 -1px 1px 0 #000;
+}
+
+.appbar-right a:hover, form button:hover {
+  
+    color: #b2ffd2;
+    text-decoration: underline;
+    transition: 0.4s;
+}
+
+.appbar-left h1 {
+   font-size: 2.2rem;
+   font-weight: bold;
+   text-shadow: 1px 1px 0 #000000,
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000;
+}
+
+.tiffany-line {
+    border: none;
+    height: 2px;
+    background-color: #0ABAB5; /* Cor verde Tiffany */
+    margin: 3.5rem 0; /* Espaçamento vertical */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0; /* Ajuste o espaçamento entre as linhas e os ícones */
+}
+
+.social-icon {
+    color: #6462f1; /* Cor Tiffany */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #72f3b3; /* Cor de destaque ao passar o mouse */
+}
+
+/* Menu lateral e container de conteúdo */
+.menu-container {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap; /* Adicionado para permitir que os itens quebrem em telas menores */
+}
+
+.sidebar {
+    width: 180px;
+    background-color: #414146;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 25px;
+}
+
+.sidebar ul li a {
+    color: #f8f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #3fe0e6;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Estilos para os títulos */
+.content h1, .feedback-text h2 {
+    color: #6868db;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.feedback-text h2 {
+    margin-top: 60px;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.feedback-text p {
+    text-align: justify;
+    margin-top: 30px;
+
+}
+
+/* Seção de fotos dos produtos */
+.product-photos, .product-photos2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 1rem 0;
+}
+
+.product-photos img, .product-photos2 img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Centraliza o título h2 */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Seção de comentários dos clientes */
+.customer-comments {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.customer-comments blockquote {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    border-radius: 0;
+    font-style: italic;
+}
+
+.customer-photo {
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 1em;
+    object-fit: cover;
+}
+
+/* Formulário de feedback */
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a seção de feedback */
+#feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.feedback-container {
+    display: flex;
+    width: 100%;
+}
+
+.feedback-text {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.feedback-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 80px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .appbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .appbar h1, .appbar-right a {
+        font-size: 1.2rem;
+    }
+    .feedback-text h2 {
+        font-size: 1.1rem;
+    }
+
+    .appbar-right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .content {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .content p, .feedback-text p {
+        line-height: 1.4;
+    }
+
+    .product-photos img .product-photos2 img {
+        width: 45%;
+        max-width: 180px;
+    }
+
+    .customer-comments {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-photo {
+        width: 80px;
+        height: 60px;
+    }
+
+    /* Alteração na disposição do feedback */
+    .feedback-container {
+        flex-direction: column; /* Alinha feedback-text acima de feedback-image */
+    }
+
+    .content, .sidebar, .feedback-text, .feedback-image {
+        padding: 10px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appbar h1 {
+        font-size: 1.3rem;
+    }
+
+    .appbar-right a {
+        font-size: 1.3rem;
+    }
+
+    .appbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .feedback-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .product-photos img .product-photos2 img {
+        width: 100%;
+        max-width: 100%;
+    }
+}

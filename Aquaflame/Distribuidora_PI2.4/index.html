@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribuidora Aquaflame</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=MyFonte:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="appbar">
+    <div class="appbar-left">
+      <h1>Distribuidora Aquaflame</h1>
+    </div>
+    <div class="appbar-right">
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+      </ul>
+    </div>
+  </header>
+    
+    <div class="content">
+      <h1>Bem-vindo à Distribuidora Aquaflame</h1>
+      <p>Selecione uma opção no menu acima para continuar.</p>
+
+      <!-- Linha verde Tiffany -->
+      <hr class="tiffany-line">
+    
+      <!-- Seção de Comentários e Feedback -->
+      <section id="feedback">
+        <div class="feedback-container">
+          <div class="feedback-text">
+            <h2>Sobre a Distribuidora Aquaflame</h2>
+            <p>Na Distribuidora Aquaflame, nossa missão é oferecer produtos de alta qualidade para atender às suas necessidades.
+              Com um portfólio diversificado que inclui água mineral, gás, cervejas e outros itens essenciais, garantimos que nossos
+              clientes tenham acesso a tudo o que precisam em um só lugar. Trabalhamos com fornecedores confiáveis ​​e adotamos rigorosos 
+              padrões de qualidade para garantir a satisfação total de nossos clientes. Além disso, nossa equipe é dedicada a fornecer um 
+              atendimento excepcional, buscando sempre superar as expectativas...</p>
+          </div>
+          <div class="feedback-image">
+            <img src="imagem/pikaso_texttoimage_create-an-image-of-a-store-made-of-masonry-that-se (1).jpeg" alt="Imagem da Distribuidora Aquaflame">
+          </div>
+        </div>
+      </section>
+
+      <!-- Linha verde Tiffany -->
+      <hr class="tiffany-line">
+
+      <h2>Produtos a Venda</h2>
+      <div class="product-photos">
+        <div class="product-photos2">
+          <img src="imagem/Cerveja Litrão.png" alt="Produto 1">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Água Mineral.png" alt="Produto 2">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Gás.png" alt="Produto 3">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Gelo.png" alt="Produto 4">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Carvão.png" alt="Produto 5">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Bora Beber.png" alt="Produto 6">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Cerveja Gelada!.png" alt="Produto 7">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Refrigerante 2 litro.png" alt="Produto 8">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Água 350ML.png" alt="Produto 9">
+        </div>
+        <div class="product-photos2">
+          <img src="imagem/Refrigerante.png" alt="Produto 10">
+        </div>
+      </div>
+
+      <!-- Linha verde Tiffany -->
+      <hr class="tiffany-line">
+
+     <div class="social-icons">
+        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Whatsapp" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <!-- Linha verde Tiffany -->
+      <hr class="tiffany-line">
+
+
+      <h2>Confira a opinião de quem já cresceu com a Aquaflame</h2>
+      <div class="customer-comments">
+        <blockquote>
+          <img src="imagem/estevistadora.png" alt="Cliente Estela" class="customer-photo">
+          <p>"A melhor distribuidora da região! Atendimento excepcional!" - Cliente Estela</p>
+        </blockquote>
+        <blockquote>
+          <img src="imagem/moça 2.webp" alt="Cliente Marina" class="customer-photo">
+          <p>"Estou sempre satisfeito com os produtos da distribuidora! A qualidade da água é excepcional, e o gás sempre chega rápido.
+             Recomendo a todos que buscam eficiência e confiança!" - Cliente Marina</p>
+        </blockquote>
+        <blockquote>
+          <img src="imagem/moça.png" alt="Cliente Beatriz" class="customer-photo">
+          <p>"Recomendo a todos! Nunca me decepcionaram." - Cliente Beatriz</p>
+        </blockquote>
+        <blockquote>
+          <img src="imagem/estrevistado.webp" alt="Cliente Lucas" class="customer-photo">
+          <p>"Serviço excelente! Sempre fui bem atendido." - Cliente Lucas</p>
+        </blockquote>
+      </div>
+
+      <!-- Linha verde Tiffany -->
+      <hr class="tiffany-line">
+      
+      <h3>Deixe seu Feedback</h3>
+      <form id="feedbackForm">
+        <textarea id="feedbackMessage" placeholder="Seu comentário" required></textarea>
+        <button type="button" onclick="enviarFeedback()">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function enviarFeedback() {
+      const mensagem = document.getElementById("feedbackMessage").value;
+      if (mensagem.trim() === "") {
+        alert("Por favor, insira um comentário.");
+        return;
+      }
+
+      // Insira o número de telefone do proprietário aqui com o código do país (exemplo: 5581999999999)
+      const numeroProprietario = "5592995185056";
+      const textoWhatsApp = `Olá, gostaria de deixar o seguinte feedback: ${encodeURIComponent(mensagem)}`;
+      const linkWhatsApp = `https://wa.me/${numeroProprietario}?text=${textoWhatsApp}`;
+
+      // Redireciona para o link do WhatsApp com a mensagem
+      window.open(linkWhatsApp, "_blank");
+    }
+  </script>
+</body>
+</html>

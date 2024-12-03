@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Duhai';
+    src: url('Duhai.ttf') format('truetype'); /* Atualize o caminho conforme a localização do arquivo */
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%; /* Base de fonte ajustada */
+    background: linear-gradient(135deg, #00ff9d, #7cccfa, #f5f546); /* Degradê: Verde, Pink, Amarelo */
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    color: #161515;
+    font-family: 'Duhai', Arial, sans-serif; /* Usando a fonte 'Duhai' como padrão */
+    padding: 0;
+    margin: 0;
+}
+
+#titulo {
+    font-size: 3.0rem;
+    color: var(--cor-titulo);
+    text-align: center;
+}
+
+#cadastroProduto {
+    padding: 25px;
+    margin: 50px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(248, 244, 244, 0.9); /* Fundo branco translúcido */
+    max-width: 500px;
+    width: 90%;
+}
+
+#cadastroProduto input, label,
+#cadastroProduto textarea {
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #fcfbfb; /* Fundo branco */
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+#btnCadastro:hover, #btnEdicao:hover, #btnNovoProduto:hover {
+    background-color: var(--cor-botao);
+}
+
+#btnCadastro {
+    display: block;
+    margin: 0 auto;
+}
+
+.conteudo, .valor {
+    display: none;
+}
+
+/* Responsividade */
+@media screen and (min-width:320px) and (max-width: 479px) {
+    #titulo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    #cadastroProduto {
+        width: 90%;
+        padding: 4% 4% 4% 5%;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 599px) {
+    #titulo {
+        font-size: 2.4rem;
+    }
+    #cadastroProduto {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 800px) {
+    #cadastroProduto {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+    #cadastroProduto {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    #cadastroProduto {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    #cadastroProduto {
+        width: 30%;
+    }
+}

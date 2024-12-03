@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Empresas</title>
+  <!-- Incluindo Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="logo-container">
+    <img src="Logo profissão.png" alt="Lema-AquaFlame" class="logo-image">
+  </div>
+  <div class="main-container">
+    <div class="form-container">
+      <h1>Cadastro de Empresas</h1>
+      <!-- Ícones das redes sociais abaixo do título -->
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://twitter.com" target="_blank" class="icon twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <form id="companyForm">
+        <label for="name">Nome da Empresa</label>
+        <input type="text" id="name" name="name"  required>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email"  required>
+        
+        <label for="cnpj">CNPJ</label>
+        <input type="text" id="cnpj" name="cnpj" required>
+        
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(xx) xxxxx-xxxx" required>
+        
+        <button type="submit" onclick="botaoCadastrar()">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
