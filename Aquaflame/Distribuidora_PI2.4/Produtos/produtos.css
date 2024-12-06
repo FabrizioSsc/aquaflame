@@ -1,10 +1,22 @@
 /* Estilo geral do body */
-body {
-    font-family: 'Open Sans', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    border: 0;
+
+    font-family: 'Open Sans', sans-serif;
     color: #333;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+:root {
+    --color-title: #3fe0e6;
+
 }
 
 /* Container principal */
@@ -12,98 +24,35 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 0px 20px; */
     background-color: #fcf9f9;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos */
+h1, h2, h3 {
+    color: var(--color-title);
+    margin-left: 10px;
+}
+
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    color: #3fe0e6;
     font-size: 2.5em;
-    margin: 0;
     padding: 20px 0;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-h2, h3 {
-    color: #3fe0e6;
-    font-family: 'Open Sans', sans-serif;
-}
-/* NAV BAR DOS PRODUTOS */
-
-section {
-    text-align: center; 
-    margin-bottom: 20px; 
-   
-    padding: 20px; 
- 
+/* NAV BAR*/
+#title {
+    font-size: 34px;
+    font-weight: bolder;
+    margin-bottom: 15px;
 }
 
-h1 {
-    font-size: 2rem; 
-    font-weight: bold;
-    margin-bottom: 15px; 
-}
+/* FIM DA NAVBAR*/
 
-
-
-
-/* Estilo para a barra de navegação */
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; 
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap; 
-}
-
-.navbar li {
-    margin: 0 15px; 
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333; 
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #3fe0e6; /* Cor de fundo ao passar o mouse */
-    color: #fff; /* Cor do texto ao passar o mouse */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column; /* Alinha os links verticalmente em telas menores */
-        gap: 10px; /* Espaçamento entre os links */
-    }
-
-    .navbar a {
-        font-size: 1.1rem; /* Reduz o tamanho da fonte em telas menores */
-        padding: 12px 20px; /* Ajusta o padding para o toque em dispositivos móveis */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem; /* Ajusta o tamanho do título para telas muito pequenas */
-    }
-
-    .navbar a {
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-    }
-}
 
 /* Estilo para a lista de bebidas */
 .beer-list {
