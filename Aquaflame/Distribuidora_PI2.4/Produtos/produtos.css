@@ -22,7 +22,7 @@ html, body {
 /* Container principal */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
     /* padding: 0px 20px; */
     background-color: #fcf9f9;
@@ -45,10 +45,58 @@ h1 {
 }
 
 /* NAV BAR*/
+#navbar {
+    background-color: #fff; min-height: fit-content; width: 100%; max-width: 1240px; position: fixed; box-shadow: 0px 0px 10px rgba(0,0,0, 0.1); z-index: 1;
+
+    ul {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        list-style: none;
+
+        li {
+            border: 1px solid white;
+            min-width: 100px;
+            min-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            a, span {
+                text-decoration: none;
+                position: relative;
+            
+            }   
+        }
+
+        li:hover {
+            background-color: rgba(231, 231, 231, 0.342);
+            cursor: pointer; 
+
+            a, span {
+                color: #3fe0e6;
+                
+            }
+        }
+
+        #cart {
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
 #title {
     font-size: 34px;
     font-weight: bolder;
     margin-bottom: 15px;
+    margin-left: 0;
 }
 
 /* FIM DA NAVBAR*/
