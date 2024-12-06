@@ -9,24 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <body>
     <div class="container">
-        <section>
-            <h1>Bebidas Disponíveis</h1>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#aguas">Águas</a></li>
-                    <li><a href="#cervejas">Cervejas</a></li>
-                    <li><a href="#carvao">Carvão</a></li>
-                    <li><a href="#gas">Gás</a></li>
-                    <li><a href="#refrigerantes">Refrigerantes</a></li>
-                    <li><a href="#gelo">Gelo</a></li>
-                </ul>
-            </nav>
-        </section>
+      
+        
+        
+        
         
         
 
-        <h2 id="aguas" >Águas</h2>
+        <div class="titulodosprodutos">
+
+      
+            <h2 id="aguas" >Águas</h2>
+        
         <div class="beer-list">
+          
+           
+            
             <!-- Agua -->
             <div class="beer-card">
                 <img  class="produtos-imgs" src="aguacrystal.webp" alt="Pacote de agua crystal">
@@ -87,6 +85,7 @@
                 <button onclick="adicionarAoCarrinho('Galão', 'Água Santa claudia 20L', 8, 'quantidade-Lindoya-galao-20L')">Adicionar ao Carrinho</button>
             </div>
             <div class="beer-card">
+                
                 <h3>Crim</h3>
                 <p>Pacote: 350ml</p>
                 <p>Preço: R$ 15,00</p>
@@ -115,10 +114,15 @@
                 <button onclick="adicionarAoCarrinho('Pacote', 'Água Purissima 2L', 20, 'quantidade-Purissima-pacote-2L')">Adicionar ao Carrinho</button>
             </div>
             </div>
+        </div>
+        <main class="titulodosprodutos">
+
+       
         <h2 id="cervejas">Cervejas</h2>
         <div class="beer-list">
             <!-- Cervejas -->
             <div    class="beer-card">
+              
                 <h3>Skol</h3>
                 <p>Grade Litrão</p>
                 <p>Preço: R$ 70,00</p>
@@ -259,7 +263,15 @@
                 <p>Preço: R$ 40,00</p>
                 <input type="number" min="1" value="1" id="quantidade-Corona Extra-pacote-600ml">
                 <button onclick="adicionarAoCarrinho('Pacote', 'Corona Extra 600ml', 40, 'quantidade-Corona Extra-pacote-600ml')">Adicionar ao Carrinho</button>
-            </div>     
+            </div>    
+        </div>  
+    </main>
+
+       <main class="titulodosprodutos">
+
+
+      
+
         <h2 id="gas">Botijas de Gás</h2>
         <div class="beer-list">
              <!-- Botija de Gás -->
@@ -298,6 +310,13 @@
                 <input type="number" min="1" value="1" id="quantidade-Botija-grande-20kg">
                 <button onclick="adicionarAoCarrinho('Botija', ' Gás 20kg', 285, 'quantidade-Botija-grande-20kg')">Adicionar ao Carrinho</button>
             </div>
+        </div>
+
+        </main>
+
+        <main class="titulodosprodutos">
+
+      
         <h2 id="carvao">Carvão</h2>
         <div class="beer-list">
             <!-- Carvão -->
@@ -337,7 +356,13 @@
                 <input type="number" min="1" value="1" id="quantidade-proibida-pacote-350ml">
                 <button onclick="adicionarAoCarrinho('Pacote', 'Proibida 350ml', 35, 'quantidade-proibida-pacote-350ml')">Adicionar ao Carrinho</button>
             </div>
-    
+
+        </div>
+
+        </main>
+        <main class="titulodosprodutos">
+
+      
         <h2 id="refrigerantes">Refrigerantes</h2>
         <div class="beer-list">
             <!-- Guaranás e Coca-Cola -->
@@ -411,6 +436,13 @@
                 <input type="number" min="1" value="1" id="quantidade-Kaiser-pacote-350ml">
                 <button onclick="adicionarAoCarrinho('Pacote', 'Kaiser 350ml', 40, 'quantidade-Kaiser-pacote-350ml')">Adicionar ao Carrinho</button>
             </div>
+        </div>
+
+        </main>
+
+        <main class="titulodosprodutos">
+
+        
         <h2 id="gelo">Gelo</h2>
         <div class="beer-list">
              <!-- Gelo -->
@@ -436,19 +468,27 @@
             <button onclick="adicionarAoCarrinho('Balde', 'Gelo 18kg', 8, 'quantidade-balde-Gelo-18kg')">Adicionar ao Carrinho</button>
         </div>
     </div>
+
+
+    <!-- Carrinho  -->
+   
+    <div class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="listaCarrinho"></ul>
+        <!-- Seção para o cliente inserir o endereço -->
+
+    <h3>Endereço de Entrega</h3>
+        <label for="enderecoCliente">Digite seu endereço:</label>
+        <input type="text" id="enderecoCliente" placeholder="Ex: Rua Exemplo, Nº 123, Bairro" required>
+        <button onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
     </div>
-        <!-- Seção do carrinho -->
-        <div class="carrinho">
-            <h2>Seu Carrinho</h2>
-            <ul id="listaCarrinho"></ul>
-            <!-- Seção para o cliente inserir o endereço -->
-    
-        <h3>Endereço de Entrega</h3>
-            <label for="enderecoCliente">Digite seu endereço:</label>
-            <input type="text" id="enderecoCliente" placeholder="Ex: Rua Exemplo, Nº 123, Bairro" required>
-            <button onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
-        </div>
-    </div>
+   
+
+</main>
+
+</div>
+
+
 
 
     <script>

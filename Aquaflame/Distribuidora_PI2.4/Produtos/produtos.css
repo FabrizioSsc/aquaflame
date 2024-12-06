@@ -20,7 +20,7 @@ body {
 
 /* Títulos */
 h1 {
-    font-family: 'Open Sans', sans-serif;
+   
     color: #3fe0e6;
     font-size: 2.5em;
     margin: 0;
@@ -34,111 +34,83 @@ h2, h3 {
     color: #3fe0e6;
     font-family: 'Open Sans', sans-serif;
 }
-/* NAV BAR DOS PRODUTOS */
 
-section {
-    text-align: center; 
-    margin-bottom: 20px; 
-   
-    padding: 20px; 
- 
-}
+/* produtos */
 
-h1 {
-    font-size: 2rem; 
-    font-weight: bold;
-    margin-bottom: 15px; 
-}
-
-
-
-
-/* Estilo para a barra de navegação */
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; 
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap; 
-}
-
-.navbar li {
-    margin: 0 15px; 
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333; 
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #3fe0e6; /* Cor de fundo ao passar o mouse */
-    color: #fff; /* Cor do texto ao passar o mouse */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column; /* Alinha os links verticalmente em telas menores */
-        gap: 10px; /* Espaçamento entre os links */
-    }
-
-    .navbar a {
-        font-size: 1.1rem; /* Reduz o tamanho da fonte em telas menores */
-        padding: 12px 20px; /* Ajusta o padding para o toque em dispositivos móveis */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem; /* Ajusta o tamanho do título para telas muito pequenas */
-    }
-
-    .navbar a {
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-    }
-}
-
-/* Estilo para a lista de bebidas */
 .beer-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
+    display: flex; 
+    overflow-x: auto; 
+    padding: 10px 0; 
+    gap: 20px; 
 }
 
 /* Cartão de bebida */
 .beer-card {
-    width: 200px;
+    min-width: 200px;
+    width: 200px; 
+    flex: 0 0 auto; 
     padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     text-align: center;
-    margin: 10px;
-    box-sizing: border-box;
-    display: inline-block;
-    vertical-align: top;
-    background-color: #fff; /* Fundo branco para os cartões */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave */
+    background-color: #fff; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
+
+
+
 .produtos-imgs {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+
+    height: auto; 
     border-radius: 10px 10px 0 0; 
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
     object-fit: cover;
+
+} 
+
+
+
+/* Media query para telas menores que 600px */
+@media (max-width: 600px) {
+    .beer-card {
+        max-width: 90%; /* Aumenta a largura máxima em telas pequenas */
+    }
+
+    .produtos-imgs {
+        object-fit: contain; /* Ajusta a imagem para caber no contêiner sem cortar */
+    }
+}
+
+/* Media query para telas entre 601px e 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    .beer-card {
+        max-width: 80%; /* Ajusta a largura máxima em telas médias */
+    }
 }
 
 .beer-card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.03); 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
@@ -172,17 +144,19 @@ button {
 }
 
 button:hover {
-    background-color: #2ab8c8; /* Cor do botão em hover */
-    transform: translateY(-2px); /* Efeito de elevação no hover */
+    background-color: #2ab8c8; 
+    transform: translateY(-2px); 
 }
 
-/* Estilo para o carrinho */
+
 .carrinho {
+    padding: 0;
     margin-top: 40px;
-    padding: 20px;
+    height: 100%;
     background-color: #ecf0f1;
     border-radius: 8px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
 }
 
 .carrinho h2 {
