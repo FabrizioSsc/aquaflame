@@ -20,7 +20,7 @@
                 <li><a href="#refrigerantes">Refrigerantes</a></li>
                 <li><a href="#gelo">Gelo</a></li>
                 <li id="cart">
-                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <a href="#carrinho"><span class="material-symbols-outlined">shopping_cart</span></a>
                 </li>
             </ul>
         </div>
@@ -272,10 +272,6 @@
       </main>
 
          <main class="titulodosprodutos">
-
-
-
-
           <h2 id="gas">Botijas de Gás</h2>
           <div class="beer-list">
                <!-- Botija de Gás -->
@@ -445,8 +441,6 @@
           </main>
 
           <main class="titulodosprodutos">
-
-
           <h2 id="gelo">Gelo</h2>
           <div class="beer-list">
                <!-- Gelo -->
@@ -474,20 +468,15 @@
       </div>
     </div>
 
-
       <!-- Carrinho  -->
-
-      <div class="carrinho">
-          <h2>Seu Carrinho</h2>
-          <ul id="listaCarrinho"></ul>
-          <!-- Seção para o cliente inserir o endereço -->
-
-      <h3>Endereço de Entrega</h3>
-          <label for="enderecoCliente">Digite seu endereço:</label>
-          <input type="text" id="enderecoCliente" placeholder="Ex: Rua Exemplo, Nº 123, Bairro" required>
-          <button onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
-      </div>
-      </div>
+        <div id="carrinho">
+            <h2>Seu Carrinho</h2>
+            <ul id="listaCarrinho"></ul>
+            <!-- Seção para o cliente inserir o endereço -->
+            <label for="enderecoCliente"><h3>Endereço de Entrega</h3></label>
+            <input type="text" id="enderecoCliente" placeholder="Ex: Rua Exemplo, Nº 123, Bairro" required style="padding: 10px; border-radius: 10px; width: 90%; margin-bottom: 10px;"><br>
+            <button onclick="enviarWhatsApp()">Enviar para o WhatsApp</button>
+        </div>
     </div>
 
 
@@ -523,11 +512,11 @@
                 return;
             }
             // Capturar o endereço no momento do envio
-        const enderecoCliente = document.getElementById("enderecoCliente").value;
-        if (!enderecoCliente) {
-            alert("Por favor, insira seu endereço.");
-            return;
-        }
+            const enderecoCliente = document.getElementById("enderecoCliente").value;
+            if (!enderecoCliente) {
+                alert("Por favor, insira seu endereço.");
+                return;
+            }
             let mensagem = "Olá! Gostaria de fazer meu Pedido:\n";
             carrinho.forEach(item => {
                 mensagem += `${item.quantidade} ${item.nome} ${item.tamanho} - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
