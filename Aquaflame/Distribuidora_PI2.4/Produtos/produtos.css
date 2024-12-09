@@ -49,14 +49,14 @@ h1 {
 #navbar {
     background-color: #fff; min-height: fit-content; width: 100%; max-width: 1240px; position: fixed; box-shadow: 0px 0px 10px rgba(0,0,0, 0.1); z-index: 1; user-select: none;
 
-    ul {
+    #items-navbar {
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: left;
         list-style: none;
 
-        li {
+        a {
             border: 1px solid white;
             min-width: 100px;
             min-height: 50px;
@@ -67,21 +67,15 @@ h1 {
             justify-content: center;
             align-items: center;
             padding: 10px;
-
-            a, span {
-                text-decoration: none;
-                position: relative;
-            
-            }   
+            text-decoration: none;
         }
 
-        li:hover {
+        a:hover {
             background-color: rgba(231, 231, 231, 0.342);
-            cursor: pointer; 
-
-            a, span {
-                color: #3fe0e6;
-                
+            cursor: pointer;
+            color:#3fe0e6;
+            span {
+                color:#3fe0e6;
             }
         }
 
